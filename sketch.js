@@ -31,18 +31,22 @@ function draw() {
     dogImage(happyDog);
   }
   drawSprites();
-
+  //Indicating the food remaining
   text("Stock of Food is: "+readStock);
+  text("Note: Press UP Arrow Key To Feed The Milk",150,20);
 
 
-  //add styles here
+
 
 }
 
-function readStock(){
+//reading the value of the food remaining from the database
+function readStock(data){
   foodS = data.val();
 }
 
+//function is used to write the value of the food remaining
+//in database
 function writeStock(){
   database.ref('/').update({
     Food:x 
